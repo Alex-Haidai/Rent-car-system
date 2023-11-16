@@ -11,9 +11,6 @@ namespace Catalog.DAL.Entities
     {
         public int UserId { get; set; }
         public string Name { get; set; }
-
-       
-
         public string Email { get; set; }
         public string Password { get; set; }
         public IEnumerable<Booking> Bookings { get; set; }

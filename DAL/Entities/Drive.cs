@@ -10,7 +10,6 @@ namespace DAL.Entities
     {
         public int DriveId { get; set; }
         public Car Car { get; set; }
-
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public double Length { get; set; }

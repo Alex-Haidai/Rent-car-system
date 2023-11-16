@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories.Interfaces
 {
-    internal interface IDriveRepository : IRepository<Drive> 
+    public interface IDriveRepository : IRepository<Drive> 
     {
     }
 }

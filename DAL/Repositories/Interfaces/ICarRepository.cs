@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories.Interfaces
 {
-    internal interface ICarRepository : IRepository<Car>
+    public interface ICarRepository : IRepository<Car>
     {
     }
 }
