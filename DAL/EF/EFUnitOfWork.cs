@@ -86,14 +86,5 @@ namespace DAL.EF
             GC.SuppressFinalize(this);
         }
 
-        void IUnitOfWork.Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        void IDisposable.Dispose()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
