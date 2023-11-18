@@ -1,4 +1,5 @@
 ﻿
+using CCL.Security.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,13 @@ namespace DAL.Entities
     {
         public int BookingId { get; set; }
         public double Cost { get; set; }
-        public Drive Drive { get; set; } = null!;
+        public Drive Drive { get; set; }
+        public User User { get; set; }
 
+        public Booking(Drive drive, User user)
+        {
+            Drive = drive;
+            User = user;
+        }
     }
 }
