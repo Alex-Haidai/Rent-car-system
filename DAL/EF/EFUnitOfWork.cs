@@ -15,7 +15,6 @@ namespace DAL.EF
     public class EFUnitOfWork : IUnitOfWork
     {
         private RentCarContext _db;
-        private UserRepository _userRepository;
         private CarRepository _carRepository;
         private DriveRepository _driveRepository;
         private BookingRepository _bookingRepository;
@@ -23,18 +22,9 @@ namespace DAL.EF
 
         public EFUnitOfWork(DbContextOptions options)
         {
-            _db = new RentCarContext(options);
+            _db = new RentCarContext((DbContextOptions<RentCarContext>)options);
         }
 
-        IUserRepository IUnitOfWork.Users
-        {
-            get
-            {
-                if (_userRepository == null)
-                    _userRepository = new UserRepository(_db);
-                return _userRepository;
-            }
-        }
         ICarRepository IUnitOfWork.Cars
         {
             get

@@ -9,9 +9,6 @@ namespace DAL.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        
-        IUserRepository Users { get; }
-
         ICarRepository Cars { get; }
         IDriveRepository Drives { get; }
         IBookingRepository Bookings { get; }
