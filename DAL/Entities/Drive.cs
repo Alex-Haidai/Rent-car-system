@@ -10,6 +10,7 @@ namespace DAL.Entities
         public double Length { get; set; }
         public double Cost { get; set; }
         public TimeSpan Duration { get; set; }
+        public DriveState CurrentDriveState { get; set; }
         public Drive(Car car)
         {
             Car = car;

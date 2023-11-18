@@ -13,6 +13,7 @@ namespace DAL.Entities
         public string Model { get; set; }
         public int Year { get; set; }
         public float Rating { get; set; }
+        public CarState CurrentCarState { get; set; }
         public Car(string brand, string model)
         {
             Brand = brand;
