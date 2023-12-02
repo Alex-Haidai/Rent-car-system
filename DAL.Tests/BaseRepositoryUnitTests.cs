@@ -11,6 +11,8 @@ using System.IO;
 using DAL.Entities;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System.Net.Sockets;
+using System.Reflection.Metadata;
 
 namespace DAL.Tests
 {
@@ -87,49 +89,6 @@ namespace DAL.Tests
                     expectedCar
                     ), Times.Once());
         }
-
-       
-        /*public void GetAll_WithoutInput_CalledToListMethodOfDBSetWithoutArgs() 
-        {
-            DbContextOptions opt = new DbContextOptionsBuilder<RentCarContext>().Options;
-            var mockContext = new Mock<RentCarContext>(opt);
-            var mockDbSet = new Mock<DbSet<Car>>();
-            mockContext
-                .Setup(context =>
-                    context.Set<Car>(
-                        ))
-                .Returns(mockDbSet.Object);
-
-            var repository = new TestCarRepository(mockContext.Object);
-
-
-            repository.GetAll();
-
-            mockDbSet.Verify(
-                dbSet => dbSet.ToList<Car>(), Times.Once());
-            
-        }
-
-        
-        public void Update_InputCarInstance_CalledEntryMethodOfDBContextWithCarInstanceAndChangedItsStateToModified()
-        {
-            DbContextOptions opt = new DbContextOptionsBuilder<RentCarContext>().Options;
-            var mockContext = new Mock<RentCarContext>(opt);
-            var mockDbSet = new Mock<DbSet<Car>>();
-            mockContext
-                .Setup(context =>
-                    context.Set<Car>(
-                        ))
-                .Returns(mockDbSet.Object);
-            var repository = new TestCarRepository(mockContext.Object);
-            Car expectedCar = new Mock<Car>("Toyota", "Supra").Object;
-
-            repository.Create(expectedCar);
-            repository.Update(expectedCar);
-
-            mockContext.Verify(
-                dbcontext => dbcontext.Entry(expectedCar), Times.Once());
-        }*/
 
     }
 }
