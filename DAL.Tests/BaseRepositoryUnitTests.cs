@@ -29,6 +29,7 @@ namespace DAL.Tests
                     context.Set<Car>(
                         ))
                 .Returns(mockDbSet.Object);
+
             var repository = new TestCarRepository(mockContext.Object);
             Car expectedCar = new Mock<Car>("Toyota", "Supra").Object;
 
@@ -83,6 +84,11 @@ namespace DAL.Tests
             var repository = new TestCarRepository(mockContext.Object);
 
             repository.Delete(expectedCar.CarId);
+
+            mockDbSet.Verify(
+                dbSet => dbSet.Find(
+                    expectedCar.CarId
+                    ), Times.Once());
 
             mockDbSet.Verify(
                 dbSet => dbSet.Remove(
