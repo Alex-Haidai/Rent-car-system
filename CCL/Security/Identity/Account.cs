@@ -12,13 +12,15 @@ namespace CCL.Security.Identity
         public string Name { get; } 
         public string Email { get; }
         public string Password { get; }
+        protected string AccountType { get; }
 
-        public Account(int userId, string name, string email, string password)
+        public Account(int userId, string name, string email, string password, string accountType)
         {
             AccountId = userId;
             Name = name;
             Email = email;
             Password = password;
+            AccountType = accountType;
         }
     }
 }
