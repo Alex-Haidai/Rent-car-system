@@ -10,8 +10,8 @@ namespace CCL.Security.Identity
     public class User : Account
     {
         public double Balance { get; set; }
-        public User(int userId, string name, string email, string password)
-            : base(userId, name, email, password, nameof(User))
+        public User(int userId, string name)
+            : base(userId, name, nameof(User))
         {
             Balance = 0;
         }

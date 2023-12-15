@@ -26,7 +26,7 @@ namespace BLL.Services.Impl
             _database = unitOfWork;
         }
 
-        /// <exception cref="MethodAccessException"></exception>
+        
         public IEnumerable<CarDTO> GetCars()
         {
             var carsEntitites =

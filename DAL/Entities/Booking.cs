@@ -10,11 +10,5 @@ namespace DAL.Entities
         public double Cost { get; set; }
         public Drive Drive { get; set; }
         public Account User { get; set; }
-
-        public Booking(Drive drive, Account user)
-        {
-            Drive = drive;
-            User = user;
-        }
     }
 }

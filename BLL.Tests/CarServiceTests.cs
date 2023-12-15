@@ -26,15 +26,13 @@ namespace BLL.Tests
             // Act
             // Assert
             Assert.Throws<ArgumentNullException>(
-            () => new CarService(nullUnitOfWork)
-            );
+            () => new CarService(nullUnitOfWork));
         }
 
         [Fact]
         public void GetCars_CarFromDAL_CorrectMappingToCarDTO()
         {
             // Arrange
-            
             var carService = GetCarService();
             // Act
             var actualCarDto = carService.GetCars().First();
