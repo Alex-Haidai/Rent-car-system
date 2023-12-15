@@ -14,9 +14,6 @@ namespace DAL.EF
             : base(options)
         {
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=TestDb;Trusted_Connection=True;");
-        }
+        
     }
 }
